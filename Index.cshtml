@@ -1,0 +1,45 @@
+﻿@model DashboardViewModel
+
+@{
+    ViewData["Title"] = "Player Dashboard";
+}
+
+<div class="container mx-auto mt-6">
+    <div class="bg-white p-6 rounded shadow-lg">
+        <h1 class="text-2xl font-bold mb-4">Player Dashboard</h1>
+
+        <section class="mb-6">
+            <h2 class="text-xl font-bold mb-2">Player Information</h2>
+            <div class="grid grid-cols-2 gap-4">
+                <div>
+                    <p class="font-semibold">Username:</p>
+                    <p class="text-gray-800">@Model.Username</p>
+                </div>
+                <div>
+                    <p class="font-semibold">Email:</p>
+                    <p class="text-gray-800">@Model.Email</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="text-xl font-bold mb-2">Gameplay Statistics</h2>
+            <div>
+                <p class="font-semibold">Total Games Played:</p>
+                <p class="text-gray-800">@Model.TotalGamesPlayed</p>
+            </div>
+            <div class="mt-2">
+                <p class="font-semibold">Total Wins:</p>
+                <p class="text-green-600">@Model.TotalWins</p>
+            </div>
+            <div class="mt-2">
+                <p class="font-semibold">Total Losses:</p>
+                <p class="text-red-600">@Model.TotalLosses</p>
+            </div>
+            <div class="mt-2">
+                <p class="font-semibold">Win Percentage:</p>
+                <p class="text-blue-600">@Model.WinPercentage.ToString("0.##")%</p>
+            </div>
+        </section>
+    </div>
+</div>
